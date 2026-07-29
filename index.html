@@ -1832,53 +1832,163 @@
     <p>Tự tin bán hàng với dữ liệu so sánh rõ ràng</p>
   </div>
 
-  <!-- vs Reno15F -->
-  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><div style="margin-bottom:8px;">
-    <div style="background:var(--gray-800); color:white; padding:12px 16px; border-radius:var(--radius) var(--radius) 0 0; font-family:Nunito,sans-serif; font-size:15px; font-weight:800;">
-      🆚 Reno16F 5G <span style="color:#1DB954;">vs</span> Reno15F 5G
-    </div>
-    <table class="comp-table" style="border-radius: 0 0 var(--radius) var(--radius);">
-      <tr><th>Tiêu Chí</th><th class="oppo-col">Reno16F 5G ✅</th><th class="rival-col">Reno15F 5G</th></tr>
-      <tr><td>Thiết kế</td><td>Hành tinh 3D · <strong>IP69K</strong> · OPPO Bubble mới</td><td>Mưa sao băng · IP69 (cũ)</td></tr>
-      <tr><td>Camera</td><td>Tele 3.5x · POP Cam · <strong>AI Remix · AI Popout 2.0</strong> · Video 4K cân bằng</td><td>Không có Tele · Không có các tính năng này</td></tr>
-      <tr><td>Hiệu năng</td><td>Dimensity 7300 · <strong>AI LinkBoost 4.0</strong> · Tối ưu game UGC</td><td>QC 6 Gen 1 · AI LinkBoost 3.0 (cũ hơn)</td></tr>
-      <tr><td>Hệ điều hành</td><td><strong>AI Mind Space</strong> (3 AI) · SnapKey · Thu Chi AI · Dịch Menu AI · Quét tài liệu AI</td><td>Không có tất cả</td></tr>
-    </table>
-  </div></div>
-
-  <!-- vs Samsung A57 -->
-  <div style="margin-top:20px; margin-bottom:8px;">
-    <div style="background:var(--gray-800); color:white; padding:12px 16px; border-radius:var(--radius) var(--radius) 0 0; font-family:Nunito,sans-serif; font-size:15px; font-weight:800;">
-      🆚 Reno16F 5G <span style="color:#1DB954;">vs</span> Samsung A57
-    </div>
-    <table class="comp-table" style="border-radius: 0 0 var(--radius) var(--radius);">
-      <tr><th>Tiêu Chí</th><th class="oppo-col">Reno16F 5G ✅</th><th class="rival-col">Samsung A57</th></tr>
-      <tr><td>Màn hình</td><td>Viền siêu mỏng ~<strong>93%</strong> · Cảm ứng kháng nước</td><td>Viền dày ~86% · Không cảm ứng kháng nước</td></tr>
-      <tr><td>Kháng nước</td><td><strong>IP69K</strong> (kháng nước nóng 80°C)</td><td>IP68 (tiêu chuẩn thấp hơn)</td></tr>
-      <tr><td>Selfie</td><td><strong>50MP · Góc 100°</strong></td><td>12MP (kém hơn nhiều)</td></tr>
-      <tr><td>Camera Tele</td><td><strong>Tele 3.5x 50MP</strong></td><td>Không có</td></tr>
-      <tr><td>Pin & Sạc</td><td><strong>7000mAh · 80W</strong> (kèm sạc)</td><td>5000mAh · 45W</td></tr>
-      <tr><td>AI tính năng</td><td><strong>11 tính năng AI</strong> camera + Mind Space + Thu Chi + Dịch Menu</td><td>Ít hơn</td></tr>
-    </table>
+  <!-- COMPARE TOGGLE -->
+  <div style="display:flex; gap:6px; margin-bottom:20px; overflow-x:auto; scrollbar-width:none; padding-bottom:2px;">
+    <button onclick="showCmp('reno15',this)" id="cmp-reno15"
+      style="flex-shrink:0; padding:9px 16px; border-radius:100px; border:2px solid #1DB954; background:#1DB954; color:white; font-family:'Be Vietnam Pro',sans-serif; font-size:12px; font-weight:800; cursor:pointer; white-space:nowrap;">
+      vs Reno15F
+    </button>
+    <button onclick="showCmp('a57',this)" id="cmp-a57"
+      style="flex-shrink:0; padding:9px 16px; border-radius:100px; border:2px solid #e5e7eb; background:white; color:#6b7280; font-family:'Be Vietnam Pro',sans-serif; font-size:12px; font-weight:800; cursor:pointer; white-space:nowrap;">
+      vs Samsung A57
+    </button>
+    <button onclick="showCmp('iphone',this)" id="cmp-iphone"
+      style="flex-shrink:0; padding:9px 16px; border-radius:100px; border:2px solid #e5e7eb; background:white; color:#6b7280; font-family:'Be Vietnam Pro',sans-serif; font-size:12px; font-weight:800; cursor:pointer; white-space:nowrap;">
+      vs iPhone 14
+    </button>
   </div>
 
-  <!-- vs iPhone 14 -->
-  <div style="margin-top:20px; margin-bottom:8px;">
-    <div style="background:var(--gray-800); color:white; padding:12px 16px; border-radius:var(--radius) var(--radius) 0 0; font-family:Nunito,sans-serif; font-size:15px; font-weight:800;">
-      🆚 Reno16F 5G <span style="color:#1DB954;">vs</span> iPhone 14
+  <!-- ── VS RENO15F ── -->
+  <div id="cmp-panel-reno15">
+    <div style="background:linear-gradient(135deg,#0a0a0a,#1a1a2e); border-radius:14px 14px 0 0; padding:12px 16px; display:flex; align-items:center; gap:10px;">
+      <span style="font-size:16px;">🆚</span>
+      <span style="font-family:'Nunito',sans-serif; font-size:15px; font-weight:900; color:white;">Reno16F 5G <span style="color:#1DB954;">vs</span> Reno15F 5G</span>
     </div>
-    <table class="comp-table" style="border-radius: 0 0 var(--radius) var(--radius);">
-      <tr><th>Tiêu Chí</th><th class="oppo-col">Reno16F 5G ✅</th><th class="rival-col">iPhone 14</th></tr>
-      <tr><td>Màn hình</td><td><strong>6.57" · 120Hz · Viền mỏng</strong></td><td>6.1" · 60Hz · Viền dày (kém hơn)</td></tr>
-      <tr><td>Kháng nước</td><td><strong>IP69K</strong> (nước nóng 80°C)</td><td>IP68 (tiêu chuẩn thấp hơn)</td></tr>
-      <tr><td>Camera</td><td><strong>50+50+8MP · Selfie 50MP</strong> · 11 AI camera</td><td>12+12MP · Selfie 12MP</td></tr>
-      <tr><td>Pin</td><td><strong>7000mAh · Sạc 80W</strong> (kèm sạc)</td><td>3279mAh · Sạc 20W (không kèm)</td></tr>
-      <tr><td>Bộ nhớ</td><td><strong>8GB – 256GB</strong></td><td>6GB – 128GB</td></tr>
-      <tr><td>AI & OS</td><td><strong>ColorOS 16</strong> · Gemini · Mind Space · Ghi âm AI · Nhân bản app (2 Zalo…)</td><td>iOS · Apple Intelligence (hạn chế ở VN)</td></tr>
-    </table>
+    <!-- Column headers -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; background:#1a1a1a; padding:8px 14px; gap:8px;">
+      <div style="font-size:11px; font-weight:800; color:#1DB954; text-align:center;">✅ Reno16F</div>
+      <div style="font-size:11px; font-weight:700; color:#6b7280; text-align:center;">Reno15F</div>
+    </div>
+    <!-- Rows -->
+    <div style="background:white; border-radius:0 0 14px 14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">✨ Thiết Kế</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;">Hành tinh 3D · <strong>IP69K</strong> · OPPO Bubble mới</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">Mưa sao băng · IP69 (cũ)</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">📷 Camera</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>Tele 3.5x</strong> · AI Remix · AI Popout 2.0 · Video 4K</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">Không có Tele · Không có các tính năng này</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">⚡ Hiệu Năng</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;">Dimensity 7300 · <strong>AI LinkBoost 4.0</strong></div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">QC 6 Gen 1 · LinkBoost 3.0 (cũ)</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">🤖 Hệ Điều Hành</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>AI Mind Space</strong> · Thu Chi AI · Dịch Menu AI · Scan AI</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">Không có tất cả</div>
+      </div>
+    </div>
   </div>
 
-  <!-- Ứng phó thương hiệu TQ -->
+  <!-- ── VS SAMSUNG A57 ── -->
+  <div id="cmp-panel-a57" style="display:none;">
+    <div style="background:linear-gradient(135deg,#0a0a0a,#1a1a2e); border-radius:14px 14px 0 0; padding:12px 16px; display:flex; align-items:center; gap:10px;">
+      <span style="font-size:16px;">🆚</span>
+      <span style="font-family:'Nunito',sans-serif; font-size:15px; font-weight:900; color:white;">Reno16F 5G <span style="color:#1DB954;">vs</span> Samsung A57</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; background:#1a1a1a; padding:8px 14px; gap:8px;">
+      <div style="font-size:11px; font-weight:800; color:#1DB954; text-align:center;">✅ Reno16F</div>
+      <div style="font-size:11px; font-weight:700; color:#6b7280; text-align:center;">Samsung A57</div>
+    </div>
+    <div style="background:white; border-radius:0 0 14px 14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">📺 Màn Hình</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;">Viền mỏng ~<strong>93%</strong> · Cảm ứng kháng nước</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">Viền dày ~86% · Không kháng nước</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">💧 Kháng Nước</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>IP69K</strong> · Nước nóng 80°C</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">IP68 (thấp hơn)</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">🤳 Selfie</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>50MP · Góc 100°</strong></div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">12MP (kém hơn nhiều)</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">🔭 Camera Tele</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>Tele 3.5x 50MP</strong></div>
+        <div style="padding:10px 14px; font-size:12px; color:#ef4444; font-weight:700;">Không có ✗</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">🔋 Pin & Sạc</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>7000mAh · 80W</strong> (kèm sạc)</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">5000mAh · 45W</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">🤖 AI</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>11 tính năng AI</strong> camera + Mind Space + Thu Chi + Dịch Menu</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">Ít hơn</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── VS IPHONE 14 ── -->
+  <div id="cmp-panel-iphone" style="display:none;">
+    <div style="background:linear-gradient(135deg,#0a0a0a,#1a1a2e); border-radius:14px 14px 0 0; padding:12px 16px; display:flex; align-items:center; gap:10px;">
+      <span style="font-size:16px;">🆚</span>
+      <span style="font-family:'Nunito',sans-serif; font-size:15px; font-weight:900; color:white;">Reno16F 5G <span style="color:#1DB954;">vs</span> iPhone 14</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; background:#1a1a1a; padding:8px 14px; gap:8px;">
+      <div style="font-size:11px; font-weight:800; color:#1DB954; text-align:center;">✅ Reno16F</div>
+      <div style="font-size:11px; font-weight:700; color:#6b7280; text-align:center;">iPhone 14</div>
+    </div>
+    <div style="background:white; border-radius:0 0 14px 14px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">📺 Màn Hình</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>6.57" · 120Hz</strong> · Viền mỏng</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">6.1" · 60Hz · Viền dày</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">💧 Kháng Nước</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>IP69K</strong> · Nước nóng 80°C</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">IP68 (thấp hơn)</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">📷 Camera</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>50+50+8MP</strong> · Selfie 50MP · 11 AI</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">12+12MP · Selfie 12MP</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">🔋 Pin & Sạc</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>7000mAh · 80W</strong> (kèm sạc)</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">3279mAh · 20W (không kèm)</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">💾 Bộ Nhớ</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #f3f4f6;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>8GB – 256GB</strong></div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">6GB – 128GB</div>
+      </div>
+
+      <div style="background:#f8fafc; padding:8px 14px; font-size:10px; font-weight:800; color:#374151; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #f0f0f0;">🤖 AI & OS</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr;">
+        <div style="padding:10px 14px; font-size:12px; color:#15803d; font-weight:600; border-right:1px solid #f3f4f6;"><strong>ColorOS 16</strong> · Gemini · Mind Space · Nhân bản app</div>
+        <div style="padding:10px 14px; font-size:12px; color:#6b7280;">iOS · Apple Intelligence (hạn chế ở VN)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Objection: Hàng Trung Quốc -->
   <div class="objection-card" style="margin-top:20px;">
     <div class="obj-question">
       <span class="obj-q-icon">❓</span>
@@ -3071,6 +3181,16 @@
       const y = nav.getBoundingClientRect().top + window.scrollY - 2;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
+  }
+
+  function showCmp(id, btn) {
+    ['reno15','a57','iphone'].forEach(k => {
+      document.getElementById('cmp-panel-'+k).style.display = k===id ? 'block' : 'none';
+      const b = document.getElementById('cmp-'+k);
+      b.style.background   = k===id ? '#1DB954' : 'white';
+      b.style.color        = k===id ? 'white'   : '#6b7280';
+      b.style.borderColor  = k===id ? '#1DB954' : '#e5e7eb';
+    });
   }
 
   function showGender(g, btn) {
