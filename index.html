@@ -2006,8 +2006,22 @@
 <section class="section" id="promo">
   <div class="section-header">
     <h2>🎁 Chương Trình Khuyến Mãi</h2>
-    <p>OPPO Reno16F 5G · Chương trình hiện hành</p>
+    <p>Chọn dòng máy để xem chương trình tương ứng</p>
   </div>
+
+  <!-- TOGGLE CHƯƠNG TRÌNH -->
+  <div style="display:flex; gap:8px; margin-bottom:20px;">
+    <button onclick="showPromo('x10')" id="pbtn-x10"
+      style="flex:1; padding:12px 8px; border-radius:12px; border:2px solid #1DB954; background:#1DB954; color:white; font-family:'Be Vietnam Pro',sans-serif; font-size:13px; font-weight:800; cursor:pointer;">
+      🔥 Find X10 Series
+    </button>
+    <button onclick="showPromo('reno')" id="pbtn-reno"
+      style="flex:1; padding:12px 8px; border-radius:12px; border:2px solid #e5e7eb; background:white; color:#6b7280; font-family:'Be Vietnam Pro',sans-serif; font-size:13px; font-weight:800; cursor:pointer;">
+      📱 Reno16F 5G
+    </button>
+  </div>
+
+  <div id="promo-reno" style="display:none;">
 
   <!-- HERO BANNER -->
   <div style="background:linear-gradient(160deg,#1a0533 0%,#3b1278 50%,#1a0533 100%); border-radius:20px; padding:28px 20px 24px; text-align:center; margin-bottom:20px; position:relative; overflow:hidden; box-shadow:0 12px 40px rgba(109,40,217,0.4);">
@@ -2159,6 +2173,137 @@
       </div>
     </div>
   </div>
+  </div><!-- /promo-reno -->
+
+  <!-- ═════════ FIND X10 SERIES ═════════ -->
+  <div id="promo-x10">
+
+    <!-- Thời gian -->
+    <div style="background:white; border-radius:16px; overflow:hidden; box-shadow:0 4px 20px rgba(29,185,84,0.18); border:2px solid #86efac; margin-bottom:12px;">
+      <div style="display:flex;">
+        <div style="flex:1; text-align:center; border-right:2px solid #bbf7d0;">
+          <div style="background:linear-gradient(135deg,#16a34a,#1DB954); color:white; padding:8px 6px; font-family:'Nunito',sans-serif; font-size:14px; font-weight:900;">📅 Pre-order</div>
+          <div style="padding:12px 6px; font-family:'Nunito',sans-serif; font-size:17px; font-weight:900; color:#14532d;">28/10 – 06/11</div>
+        </div>
+        <div style="flex:1; text-align:center;">
+          <div style="background:linear-gradient(135deg,#16a34a,#1DB954); color:white; padding:8px 6px; font-family:'Nunito',sans-serif; font-size:14px; font-weight:900;">🎁 Mở Bán</div>
+          <div style="padding:12px 6px; font-family:'Nunito',sans-serif; font-size:17px; font-weight:900; color:#14532d;">07/11</div>
+        </div>
+      </div>
+      <div style="background:#f0fdf4; padding:8px 14px; text-align:center; font-size:12px; font-weight:700; color:#166534; border-top:1px solid #bbf7d0;">📍 Kênh – Khu vực áp dụng theo thông báo</div>
+    </div>
+
+    <!-- Hero 12 triệu -->
+    <div style="background:linear-gradient(160deg,#052e16 0%,#15803d 55%,#052e16 100%); border-radius:20px; padding:24px 18px; text-align:center; margin-bottom:16px; position:relative; overflow:hidden; box-shadow:0 12px 40px rgba(22,163,74,0.35);">
+      <div style="position:absolute; top:-40px; left:-40px; width:150px; height:150px; background:rgba(255,255,255,0.05); border-radius:50%;"></div>
+      <div style="position:absolute; bottom:-50px; right:-30px; width:190px; height:190px; background:rgba(255,255,255,0.04); border-radius:50%;"></div>
+      <div style="display:inline-block; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.25); padding:5px 14px; border-radius:100px; margin-bottom:12px; position:relative;">
+        <span style="font-size:11px; font-weight:700; color:white; letter-spacing:1.2px; text-transform:uppercase;">Pre-order &amp; Hotsale · OPPO Find X10 Series</span>
+      </div>
+      <div style="font-size:13px; color:rgba(255,255,255,0.75); position:relative;">Bộ Quà Tặng Trị Giá Đến</div>
+      <div style="font-family:'Nunito',sans-serif; font-size:44px; font-weight:900; color:#fde047; line-height:1.1; position:relative; text-shadow:0 0 30px rgba(253,224,71,0.45);">12.000.000đ</div>
+    </div>
+
+    <!-- 1. Premium Service+ -->
+    <div style="background:white; border-radius:16px; box-shadow:var(--shadow); overflow:hidden; margin-bottom:14px;">
+      <div style="background:linear-gradient(135deg,#15803d,#1DB954); padding:12px 16px; display:flex; align-items:center; gap:10px;">
+        <div style="width:30px; height:30px; border-radius:50%; background:white; color:#15803d; font-family:'Nunito',sans-serif; font-size:16px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
+        <div style="font-family:'Nunito',sans-serif; font-size:16px; font-weight:900; color:white;">“Premium Service +” gồm:</div>
+      </div>
+      <div style="padding:6px 14px 10px;">
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid #f0fdf4;">
+          <div style="width:36px; height:36px; border-radius:10px; background:#dcfce7; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0;">🛡️</div>
+          <div style="font-size:13px; color:#374151;">Bảo hành <strong style="color:#15803d; font-size:15px;">24 tháng</strong></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid #f0fdf4;">
+          <div style="width:36px; height:36px; border-radius:10px; background:#dcfce7; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0;">📱</div>
+          <div style="font-size:13px; color:#374151;">Bảo hành màn hình <strong style="color:#15803d; font-size:15px;">12 tháng</strong></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid #f0fdf4;">
+          <div style="width:36px; height:36px; border-radius:10px; background:#dcfce7; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0;">📷</div>
+          <div style="font-size:13px; color:#374151;">Bảo hiểm kính camera <strong style="color:#15803d; font-size:15px;">12 tháng+</strong></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid #f0fdf4;">
+          <div style="width:36px; height:36px; border-radius:10px; background:#dcfce7; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0;">🔧</div>
+          <div style="font-size:13px; color:#374151;">Bảo hành tận nơi trong <strong style="color:#15803d; font-size:15px;">90 phút</strong></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 0;">
+          <div style="width:36px; height:36px; border-radius:10px; background:#dcfce7; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0;">🌍</div>
+          <div style="font-size:13px; color:#374151;"><strong style="color:#15803d;">Bảo hành toàn cầu</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Chương trình ưu đãi -->
+    <div style="background:white; border-radius:16px; box-shadow:var(--shadow); overflow:hidden; margin-bottom:14px;">
+      <div style="background:linear-gradient(135deg,#15803d,#1DB954); padding:12px 16px; display:flex; align-items:center; gap:10px;">
+        <div style="width:30px; height:30px; border-radius:50%; background:white; color:#15803d; font-family:'Nunito',sans-serif; font-size:16px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
+        <div style="font-family:'Nunito',sans-serif; font-size:16px; font-weight:900; color:white;">“Chương trình ưu đãi” gồm:</div>
+      </div>
+      <div style="padding:6px 14px 12px;">
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid #f0fdf4;">
+          <div style="width:36px; height:36px; border-radius:10px; background:#dcfce7; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:900; color:#15803d; flex-shrink:0;">%</div>
+          <div style="font-size:13px; color:#374151; line-height:1.5;">CTĐM trợ giá <strong style="color:#15803d; font-size:16px;">50%</strong> · min <strong style="color:#15803d;">2 triệu</strong> – max <strong style="color:#15803d;">5 triệu</strong></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid #f0fdf4;">
+          <div style="width:36px; height:36px; border-radius:10px; background:#dbeafe; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0;">💳</div>
+          <div style="font-size:13px; color:#374151;">Trả góp <strong style="color:#1d4ed8; font-size:16px;">0%</strong> kỳ hạn <strong style="color:#1d4ed8; font-size:15px;">14 tháng</strong></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 0;">
+          <div style="width:36px; height:36px; border-radius:10px; background:#dcfce7; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0;">📦</div>
+          <div style="font-size:13px; color:#374151; line-height:1.5;">Kèm bộ phụ kiện <strong>Sạc + Cáp + Ốp lưng + DMH</strong></div>
+        </div>
+      </div>
+
+      <!-- 2 PMH mua kèm -->
+      <div style="padding:0 14px 14px;">
+        <div style="font-size:11px; font-weight:800; color:#6b7280; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">🎟️ Tặng PMH khi mua kèm</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; align-items:stretch; border-radius:12px; overflow:hidden; border:1.5px solid #86efac;">
+            <div style="background:linear-gradient(180deg,#15803d,#1DB954); padding:0 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:86px;">
+              <div style="font-size:9px; font-weight:800; color:rgba(255,255,255,0.85); letter-spacing:1px;">PMH</div>
+              <div style="font-family:'Nunito',sans-serif; font-size:22px; font-weight:900; color:white; line-height:1.1;">2.000.000đ</div>
+            </div>
+            <div style="padding:10px 12px; flex:1; background:#f0fdf4; font-size:12px; color:#166534; line-height:1.5;">Khi mua kèm <strong>bộ ống kính Tele X10 Series</strong></div>
+          </div>
+          <div style="display:flex; align-items:stretch; border-radius:12px; overflow:hidden; border:1.5px solid #86efac;">
+            <div style="background:linear-gradient(180deg,#15803d,#1DB954); padding:0 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:86px;">
+              <div style="font-size:9px; font-weight:800; color:rgba(255,255,255,0.85); letter-spacing:1px;">PMH</div>
+              <div style="font-family:'Nunito',sans-serif; font-size:22px; font-weight:900; color:white; line-height:1.1;">1.000.000đ</div>
+            </div>
+            <div style="padding:10px 12px; flex:1; background:#f0fdf4; font-size:12px; color:#166534; line-height:1.5;">Khi mua kèm <strong>tai nghe OPPO Enco Clip2</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tóm tắt nhanh -->
+    <div style="background:linear-gradient(135deg,#0a0a0a,#0f1f0a); border-radius:16px; padding:16px; margin-bottom:14px;">
+      <div style="font-size:11px; font-weight:800; color:#1DB954; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">⚡ Nhớ Nhanh 5 Con Số</div>
+      <div style="display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="background:rgba(29,185,84,0.15); color:#86efac; border-radius:100px; padding:5px 12px; font-size:12px; font-weight:800;">12 triệu quà tặng</span>
+        <span style="background:rgba(29,185,84,0.15); color:#86efac; border-radius:100px; padding:5px 12px; font-size:12px; font-weight:800;">BH 24 tháng</span>
+        <span style="background:rgba(29,185,84,0.15); color:#86efac; border-radius:100px; padding:5px 12px; font-size:12px; font-weight:800;">Kính camera 12 tháng+</span>
+        <span style="background:rgba(29,185,84,0.15); color:#86efac; border-radius:100px; padding:5px 12px; font-size:12px; font-weight:800;">Tận nơi 90 phút</span>
+        <span style="background:rgba(59,130,246,0.18); color:#93c5fd; border-radius:100px; padding:5px 12px; font-size:12px; font-weight:800;">Trả góp 0% – 14 tháng</span>
+        <span style="background:rgba(251,191,36,0.15); color:#fde047; border-radius:100px; padding:5px 12px; font-size:12px; font-weight:800;">Thu cũ 50% (2–5 triệu)</span>
+      </div>
+    </div>
+
+    <!-- Gợi ý tư vấn khách hàng -->
+    <div style="background:linear-gradient(135deg,#fefce8,#fef9c3); border-radius:18px; border:2px solid #fde047; overflow:hidden; box-shadow:0 4px 20px rgba(250,204,21,0.2);">
+      <div style="background:linear-gradient(135deg,#15803d,#16a34a); padding:10px 16px; display:flex; align-items:center; gap:8px;">
+        <span style="font-size:18px;">💡</span>
+        <span style="font-family:'Nunito',sans-serif; font-size:15px; font-weight:900; color:#fde047;">GỢI Ý TƯ VẤN KHÁCH HÀNG</span>
+      </div>
+      <div style="padding:14px 16px;">
+        <div style="font-size:13px; color:#422006; line-height:1.85; font-style:italic;">
+          “Anh/chị đặt trước <strong style="color:#15803d;">OPPO Find X10 Series</strong> ngay hôm nay để nhận bộ quà tặng trị giá lên đến <strong style="color:#15803d;">12 triệu đồng</strong> cùng nhiều quyền lợi hấp dẫn: bảo hành <strong style="color:#15803d;">24 tháng</strong>, bảo hiểm kính camera <strong style="color:#15803d;">12 tháng</strong>, hỗ trợ trả góp <strong style="color:#15803d;">0%</strong> và ưu đãi khi mua kèm phụ kiện. Chương trình áp dụng từ <strong>28/10 đến 06/11</strong>. Em hỗ trợ anh/chị đăng ký đặt trước để không bỏ lỡ những ưu đãi đặc biệt này nhé!”
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /promo-x10 -->
 </section>
 
 <section class="section" id="bangia">
@@ -3464,6 +3609,16 @@
       const y = nav.getBoundingClientRect().top + window.scrollY - 2;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
+  }
+
+  function showPromo(k) {
+    ['x10','reno'].forEach(id => {
+      document.getElementById('promo-'+id).style.display = id===k ? 'block' : 'none';
+      const b = document.getElementById('pbtn-'+id);
+      b.style.background  = id===k ? '#1DB954' : 'white';
+      b.style.color       = id===k ? 'white'   : '#6b7280';
+      b.style.borderColor = id===k ? '#1DB954' : '#e5e7eb';
+    });
   }
 
   function showCmp(id, btn) {
